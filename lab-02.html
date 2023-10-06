@@ -421,7 +421,21 @@ plastic_data_all &lt;- data4 %&gt;%
 <h2>Exercises</h2>
 <div id="ex-1." class="section level3">
 <h3>Ex 1.</h3>
-<pre class="r"><code># Write your code here to answer exercise 1</code></pre>
+<pre class="r"><code># Write your code here to answer exercise 1
+
+data2%&gt;%
+  left_join(data4,by = &quot;name&quot;)%&gt;%
+  count(region)</code></pre>
+<pre><code>## # A tibble: 7 × 2
+##   region                              n
+##   &lt;chr&gt;                           &lt;int&gt;
+## 1 Africa                             40
+## 2 Asia                               28
+## 3 Europe                             30
+## 4 Latin America and The Caribbean    33
+## 5 North America                       1
+## 6 Oceania                            10
+## 7 &lt;NA&gt;                               17</code></pre>
 </div>
 <div id="ex-2." class="section level3">
 <h3>Ex 2.</h3>
