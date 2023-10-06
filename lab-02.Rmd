@@ -16,6 +16,7 @@ library(readxl)
 ## Load & join data sets
 
 ```{r load-data, message = FALSE}
+# Member 1
 data1 <- read_csv("data/mismanaged-plastic-waste-per-capita.csv")
 
 
@@ -24,7 +25,7 @@ data1 <- read_csv("data/mismanaged-plastic-waste-per-capita.csv")
 data2 <- read_csv2("data/per-capita-ocean-plastic-waste.txt")
 
 # Member 3 write code to load File 3 data here:
-
+data3 <- read_tsv("data/UN_country_population.tsv")
 
 
 # Member 4 write code to load File 4 data here:
@@ -36,6 +37,7 @@ data2 <- read_csv2("data/per-capita-ocean-plastic-waste.txt")
 
 
 ```{r join-data, message = FALSE}
+# Member 1
 plastic_data_all <- data1
 
 
@@ -48,7 +50,9 @@ plastic_data_all <- data2 %>%
 
 
 # Member 3 write code to join your data to 'plastic_data_all':
-
+plastic_data_all <- data3 %>%
+  select(-name) %>%
+  right_join(plastic_data_all, by = "code")
 
 
 # Member 4 write code to join your data to 'plastic_data_all':
