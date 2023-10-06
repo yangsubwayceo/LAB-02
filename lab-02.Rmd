@@ -1,6 +1,6 @@
 ---
 title: "Lab 02 - Global plastic waste"
-author: "Juan's Kingdom: Lim Zhen Yang, Mingshi Yue, User3 and User4"
+author: "Juan's Kingdom: Lim Zhen Yang, Mingshi Yue, zimo wang and User4"
 date: "`r Sys.Date()`"
 output: html_document
 ---
